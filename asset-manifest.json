@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-post-app/static/css/main.19fb92b7.css",
+    "main.js": "/React-post-app/static/js/main.8be11f0c.js",
+    "index.html": "/React-post-app/index.html",
+    "main.19fb92b7.css.map": "/React-post-app/static/css/main.19fb92b7.css.map",
+    "main.8be11f0c.js.map": "/React-post-app/static/js/main.8be11f0c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19fb92b7.css",
+    "static/js/main.8be11f0c.js"
+  ]
+}
