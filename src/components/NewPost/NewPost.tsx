@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./NewPost.css";
 
 export const NewPost = () => {
   const [getTitle, setTitle] = useState("");
@@ -17,7 +16,7 @@ export const NewPost = () => {
       />
       <label>Content</label>
       <textarea
-        rows="4"
+        rows={4}
         value={getContent}
         onChange={(event) => setContent(event.target.value)}
       />

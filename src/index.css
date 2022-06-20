@@ -3,3 +3,129 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.Posts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+
+.showMore {
+  width: 80%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.showMore p {
+  color: blue;
+  position: absolute;
+  right: 7rem;
+  transform: translateY(-3rem);
+}
+
+.showMore p:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+}
+
+.Post {
+  width: 251px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  margin: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.Post:hover,
+.Post:active {
+  background-color: #C0DDF5;
+}
+
+.Author {
+  margin: 16px 0;
+  color: #ccc;
+}
+
+.NewPost {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  text-align: center;
+}
+
+.NewPost label {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.NewPost input,
+.NewPost textarea,
+.NewPost select {
+  display: block;
+  width: 80%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  outline: none;
+  font: inherit;
+  margin: auto;
+}
+
+.NewPost button {
+  margin: 5px 0;
+  padding: 10px;
+  font: inherit;
+  border: 1px solid #fa923f;
+  background-color: transparent;
+  color: #fa923f;
+  cursor: pointer;
+}
+
+.NewPost button:hover,
+.NewPost button:active {
+  color: white;
+  background-color: #fa923f;
+}
+
+.FullPost {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  text-align: center;
+}
+
+.Edit label {
+  display: block;
+  color: grey;
+}
+
+.Edit button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #fa923f;
+}
+
+.Edit button:hover,
+.Edit button:active {
+  color: #521751;
+}
+
+.Edit button.Delete {
+  color: red;
+}
+
+.Edit button.Delete:hover,
+.Edit button.Delete:active {
+  color: darkred;
+}

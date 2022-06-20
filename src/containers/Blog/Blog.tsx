@@ -1,24 +1,22 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Post } from "../../components/Post/Post";
 import { FullPost } from "../../components/FullPost/FullPost";
 import { NewPost } from "../../components/NewPost/NewPost";
-import axios from "axios";
 import { useEffect } from "react";
-import "./Blog.css";
 
 export const Blog = () => {
-  let dataArray = [];
+  let dataArray: { id: number; author: string; title: string }[] = [];
   const getData = async () => {
     try {
-      let data = [];
       const config = {
         method: "GET",
         url: "https://jsonplaceholder.typicode.com/posts",
       };
-      ({ data } = await axios(config));
+      let { data } = await axios(config);
       // get only 11 data from the server
       data = data.slice(0, 11);
-      return data.map((singularPostData) => ({
+      return data.map((singularPostData: any) => ({
         ...singularPostData,
         author: "Raj gohil",
       }));

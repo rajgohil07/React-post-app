@@ -1,5 +1,4 @@
 import React from "react";
-import "./FullPost.css";
 
 export const FullPost = () => {
   let post = <p>Please select a Post!</p>;

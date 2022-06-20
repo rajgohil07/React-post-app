@@ -1,8 +1,6 @@
 import React from "react";
 
-import "./Post.css";
-
-export const Post = ({ title, author }) => (
+export const Post = ({ title, author }: { title: string; author: string }) => (
   <article className="Post">
     <h1>{title}</h1>
     <div className="Info">
