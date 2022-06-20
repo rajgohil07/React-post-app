@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import "./Blog.css";
 
 export const Blog = () => {
+  let dataArray = [];
   const getData = async () => {
     try {
       let data = [];
@@ -17,7 +18,6 @@ export const Blog = () => {
       ({ data } = await axios(config));
       // get only 11 data from the server
       data = data.slice(0, 11);
-      console.log("data.length :>> ", data.length);
       return data.map((singularPostData) => ({
         ...singularPostData,
         author: "Raj gohil",
@@ -41,13 +41,17 @@ export const Blog = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const dataArray = getShowMore ? getPost : getPost.slice(0, 4);
+  dataArray = getShowMore ? getPost : getPost.slice(0, 4);
 
   return (
     <div>
       <section className="Posts">
         {dataArray.map((singularData) => (
-          <Post key={singularData.id} title={singularData.title} />
+          <Post
+            key={singularData.id}
+            title={singularData.title}
+            author={singularData.author}
+          />
         ))}
         <br />
       </section>
