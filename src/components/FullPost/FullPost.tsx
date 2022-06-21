@@ -12,6 +12,7 @@ export const FullPost = ({
   const [getTitle, seTitle] = useState("");
   const [getContent, seContent] = useState("");
   const [getLoading, setLoading] = useState(true);
+  const [getIsPostDeleted, setIsPostDeleted] = useState(false);
 
   const fetchPostByIDAnsChangeState = async (ID: number) => {
     try {
@@ -40,6 +41,7 @@ export const FullPost = ({
       };
       const response: AxiosResponse = await axios(config);
       changeSelectedID(0);
+      setIsPostDeleted(true);
       setLoading(false);
       return response;
     } catch (e) {
@@ -55,7 +57,12 @@ export const FullPost = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedID]);
 
-  let post = <p style={{ textAlign: "center" }}>Please select a Post!</p>;
+  let post = (
+    <p style={{ textAlign: "center" }}>
+      {getIsPostDeleted && "Your post has been deleted now, "} Please select a
+      Post!
+    </p>
+  );
   if (selectedID) {
     post = (
       <div>
