@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from "axios";
+import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { Loading } from "../Loading/Loading";
 
@@ -25,6 +25,21 @@ export const FullPost = ({ selectedID }: { selectedID: number }) => {
     }
   };
 
+  const deletePostByID = async () => {
+    try {
+      setLoading(true);
+      const config: AxiosRequestConfig = {
+        method: "DELETE",
+        url: `https://jsonplaceholder.typicode.com/posts/${selectedID}`,
+      };
+      const response: AxiosResponse = await axios(config);
+      setLoading(false);
+      return response;
+    } catch (e) {
+      throw e;
+    }
+  };
+
   useEffect(() => {
     setLoading(true);
     if (selectedID) {
@@ -41,7 +56,9 @@ export const FullPost = ({ selectedID }: { selectedID: number }) => {
           <h1>{getTitle}</h1>
           <p>{getContent}</p>
           <div className="Edit">
-            <button className="Delete">Delete</button>
+            <button onClick={deletePostByID} className="Delete">
+              Delete
+            </button>
           </div>
         </div>
       </div>
