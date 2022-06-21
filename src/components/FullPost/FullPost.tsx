@@ -2,7 +2,13 @@ import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { Loading } from "../Loading/Loading";
 
-export const FullPost = ({ selectedID }: { selectedID: number }) => {
+export const FullPost = ({
+  selectedID,
+  changeSelectedID,
+}: {
+  selectedID: number;
+  changeSelectedID: Function;
+}) => {
   const [getTitle, seTitle] = useState("");
   const [getContent, seContent] = useState("");
   const [getLoading, setLoading] = useState(true);
@@ -33,6 +39,7 @@ export const FullPost = ({ selectedID }: { selectedID: number }) => {
         url: `https://jsonplaceholder.typicode.com/posts/${selectedID}`,
       };
       const response: AxiosResponse = await axios(config);
+      changeSelectedID(0);
       setLoading(false);
       return response;
     } catch (e) {
@@ -45,6 +52,7 @@ export const FullPost = ({ selectedID }: { selectedID: number }) => {
     if (selectedID) {
       (async () => await fetchPostByIDAnsChangeState(selectedID))();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedID]);
 
   let post = <p style={{ textAlign: "center" }}>Please select a Post!</p>;

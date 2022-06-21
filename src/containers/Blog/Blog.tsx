@@ -66,7 +66,7 @@ export const Blog = () => {
         </p>
       </section>
       <section>
-        <FullPost selectedID={getSelectedID} />
+        <FullPost selectedID={getSelectedID} changeSelectedID={setSelectedID} />
       </section>
       <section>
         <NewPost />
