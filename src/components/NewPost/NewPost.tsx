@@ -18,6 +18,8 @@ export const NewPost = () => {
         url: "https://jsonplaceholder.typicode.com/posts",
       };
       const { data: response } = await axios(config);
+      setTitle("");
+      setContent("");
       setLoading(false);
       return response;
     } catch (e) {
@@ -53,7 +55,7 @@ export const NewPost = () => {
         <button
           className="disabledButton"
           disabled={!getContent || !getTitle}
-          onClick={createPost}
+          onClick={async () => await createPost()}
         >
           Add Post
         </button>
