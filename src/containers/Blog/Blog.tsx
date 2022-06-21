@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { Post } from "../../components/Post/Post";
 import { FullPost } from "../../components/FullPost/FullPost";
@@ -28,6 +28,7 @@ export const Blog = () => {
   // states
   const [getShowMore, setShowMore] = useState(false);
   const [getPost, setPost] = useState([]);
+  const [getSelectedID, setSelectedID] = useState(0);
 
   const setSateFromServerData = async () => {
     const data = await getData();
@@ -49,6 +50,8 @@ export const Blog = () => {
             key={singularData.id}
             title={singularData.title}
             author={singularData.author}
+            selectID={setSelectedID}
+            id={singularData.id}
           />
         ))}
         <br />
@@ -59,7 +62,7 @@ export const Blog = () => {
         </p>
       </section>
       <section>
-        <FullPost />
+        <FullPost selectedID={getSelectedID} />
       </section>
       <section>
         <NewPost />
