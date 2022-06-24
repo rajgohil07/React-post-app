@@ -46,7 +46,19 @@ export const Blog = () => {
   dataArray = getShowMore ? getPost : getPost.slice(0, 4);
 
   return (
-    <div>
+    <div className="Blog">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/create-post">Create Post</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <Loading display={getLoading} />
       <section className="Posts">
         {dataArray.map((singularData) => (
