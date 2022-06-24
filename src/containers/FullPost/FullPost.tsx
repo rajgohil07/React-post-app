@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
-import { Loading } from "../Loading/Loading";
+import { Loading } from "../../components/Loading/Loading";
 
 export const FullPost = ({
   selectedID,

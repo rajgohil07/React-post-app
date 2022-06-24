@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { useState } from "react";
-import { Loading } from "../Loading/Loading";
+import { Loading } from "../../components/Loading/Loading";
 
 export const NewPost = () => {
   const [getTitle, setTitle] = useState("");
