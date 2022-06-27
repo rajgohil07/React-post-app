@@ -22,14 +22,10 @@ export const Blog = () => {
         </nav>
       </header>
       <Routes>
-        <Route
-          path="/"
-          element={<Posts setSelectedID={setSelectedID} />}
-        ></Route>
+        <Route path="/" element={<Posts setSelectedID={setSelectedID} />} />
+        <Route path="create-post" element={<NewPost />} />
       </Routes>
-
-      {/* <FullPost selectedID={getSelectedID} changeSelectedID={setSelectedID} />
-      <NewPost /> */}
+      {/* <FullPost selectedID={getSelectedID} changeSelectedID={setSelectedID} /> */}
     </div>
   );
 };
