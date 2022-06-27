@@ -470,6 +470,7 @@ body {
   -webkit-user-select: none;
   touch-action: manipulation;
   margin-top: 1rem;
+  padding-bottom: 9.6px !important;
 }
 
 .NotFoundButton:before {
