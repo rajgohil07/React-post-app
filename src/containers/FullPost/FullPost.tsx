@@ -65,7 +65,7 @@ export const FullPost = ({
   );
   if (selectedID) {
     post = (
-      <div>
+      <section>
         <Loading display={getLoading} />
         <div className="FullPost">
           <h1>{getTitle}</h1>
@@ -76,7 +76,7 @@ export const FullPost = ({
             </button>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
   return post;

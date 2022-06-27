@@ -28,7 +28,7 @@ export const NewPost = () => {
   };
 
   return (
-    <div>
+    <section>
       <Loading display={getLoading} />
       <div className="NewPost">
         <h1>Add a Post</h1>
@@ -60,6 +60,6 @@ export const NewPost = () => {
           Add Post
         </button>
       </div>
-    </div>
+    </section>
   );
 };

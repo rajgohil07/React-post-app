@@ -42,7 +42,7 @@ export const Posts = ({ setSelectedID }: { setSelectedID: Function }) => {
 
   dataArray = getShowMore ? getPost : getPost.slice(0, 4);
   return (
-    <>
+    <section>
       <Loading display={getLoading} />
       <section className="Posts">
         {dataArray.map((singularData) => (
@@ -61,6 +61,6 @@ export const Posts = ({ setSelectedID }: { setSelectedID: Function }) => {
           {getShowMore ? "show less..." : "show more..."}
         </p>
       </section>
-    </>
+    </section>
   );
 };

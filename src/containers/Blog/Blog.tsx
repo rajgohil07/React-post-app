@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router";
 import { FullPost } from "../FullPost/FullPost";
 import { NewPost } from "../NewPost/NewPost";
 import { Posts } from "../Posts/Posts";
@@ -20,15 +21,15 @@ export const Blog = () => {
           </ul>
         </nav>
       </header>
-      <section>
-        <Posts setSelectedID={setSelectedID} />
-      </section>
-      <section>
-        <FullPost selectedID={getSelectedID} changeSelectedID={setSelectedID} />
-      </section>
-      <section>
-        <NewPost />
-      </section>
+      <Routes>
+        <Route
+          path="/"
+          element={<Posts setSelectedID={setSelectedID} />}
+        ></Route>
+      </Routes>
+
+      {/* <FullPost selectedID={getSelectedID} changeSelectedID={setSelectedID} />
+      <NewPost /> */}
     </div>
   );
 };
