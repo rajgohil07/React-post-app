@@ -27,7 +27,7 @@ export const Posts = ({ setSelectedID }: { setSelectedID: Function }) => {
   const setSateFromServerData = async () => {
     const data = await getData();
     setPost(data);
-    setTimeout(() => setLoading(false), 1000);
+    setTimeout(() => setLoading(false), 500);
   };
 
   // states
