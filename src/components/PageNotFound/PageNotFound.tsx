@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const PageNotFound = () => (
   <>
@@ -14,9 +14,9 @@ export const PageNotFound = () => (
             please click the home button to start over.
           </p>
           <div className="OuterNotFoundButton">
-            <Link className="NotFoundButton" to={"/"}>
+            <NavLink className="NotFoundButton" to={"/"}>
               Home
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
