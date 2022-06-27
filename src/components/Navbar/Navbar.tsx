@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 export const Navbar = () => (
   <header>
@@ -12,5 +12,6 @@ export const Navbar = () => (
         </li>
       </ul>
     </nav>
+    <Outlet />
   </header>
 );

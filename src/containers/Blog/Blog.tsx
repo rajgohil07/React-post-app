@@ -11,10 +11,11 @@ export const Blog = () => {
   const [getSelectedID, setSelectedID] = useState(0);
   return (
     <div className="Blog">
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Posts setSelectedID={setSelectedID} />} />
-        <Route path="create-post" element={<NewPost />} />
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Posts setSelectedID={setSelectedID} />} />
+          <Route path="/create-post" element={<NewPost />} />
+        </Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
       {/* <FullPost selectedID={getSelectedID} changeSelectedID={setSelectedID} /> */}
