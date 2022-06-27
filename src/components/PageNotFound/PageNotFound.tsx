@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+const baseURL = process.env.NODE_ENV !== "production" ? "/" : "/React-post-app";
 export const PageNotFound = () => (
   <>
     <div className="background">
@@ -14,7 +14,7 @@ export const PageNotFound = () => (
             please click the home button to start over.
           </p>
           <div className="OuterNotFoundButton">
-            <NavLink className="NotFoundButton" to={"/"}>
+            <NavLink className="NotFoundButton" to={baseURL}>
               Home
             </NavLink>
           </div>
