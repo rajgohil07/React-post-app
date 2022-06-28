@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Loading } from "../../components/Loading/Loading";
 import { Post } from "../../components/Post/Post";
 
-export const Posts = ({ setSelectedID }: { setSelectedID: Function }) => {
+export const Posts = () => {
   let dataArray: { id: number; author: string; title: string }[] = [];
 
   const getData = async () => {
@@ -46,13 +47,13 @@ export const Posts = ({ setSelectedID }: { setSelectedID: Function }) => {
       <Loading display={getLoading} />
       <section className="Posts">
         {dataArray.map((singularData) => (
-          <Post
-            key={singularData.id}
-            title={singularData.title}
-            author={singularData.author}
-            selectID={setSelectedID}
-            id={singularData.id}
-          />
+          <Link key={singularData.id} to={`/${singularData.id}`}>
+            <Post
+              title={singularData.title}
+              author={singularData.author}
+              id={singularData.id}
+            />
+          </Link>
         ))}
         <br />
       </section>{" "}

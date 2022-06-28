@@ -1,15 +1,13 @@
 export const Post = ({
   title,
   author,
-  selectID,
   id,
 }: {
   title: string;
   author: string;
-  selectID: Function;
   id: number;
 }) => (
-  <div onClick={() => selectID(id)}>
+  <div>
     <article className="Post">
       <h1>{title}</h1>
       <div className="Info">
