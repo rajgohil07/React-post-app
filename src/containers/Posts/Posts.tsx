@@ -41,7 +41,7 @@ export const Posts = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  dataArray = getShowMore ? getPost : getPost.slice(0, 4);
+  dataArray = getShowMore ? getPost : getPost.slice(0, 8);
   return (
     <section>
       <Loading display={getLoading} />
