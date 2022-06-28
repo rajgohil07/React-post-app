@@ -524,3 +524,7 @@ body {
   top: 0;
   border-radius: 10px;
 }
+
+.Posts a {
+  border-bottom: none;
+}
