@@ -246,7 +246,8 @@ body {
   margin: 20px;
 }
 
-.Blog a {
+.Blog a,
+span {
   text-decoration: none;
   color: black;
   transition: all 250ms ease;
@@ -254,7 +255,8 @@ body {
   border-bottom: 3px solid #000000
 }
 
-.Blog a:hover {
+.Blog a:hover,
+span:hover {
   color: #FA923F;
   transition: all 250ms ease;
   padding-bottom: 5px;

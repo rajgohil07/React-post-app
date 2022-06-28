@@ -38,9 +38,9 @@ export const NewPost = () => {
           <div className="AdjustTextPadding">
             <h3>
               Congratulations! Please visit the <Link to="/">homepage</Link> to
-              see your recently created post. If you'd rather not, please
-              <a onClick={() => setIsPostCreated(false)}> click here</a> to add
-              another post.
+              see your recently created post. If you'd rather not, please &nbsp;
+              <span onClick={() => setIsPostCreated(false)}>click here</span>
+              &nbsp; to add another post.
             </h3>
           </div>
         ) : (
