@@ -528,3 +528,8 @@ body {
 .Posts a {
   border-bottom: none;
 }
+
+.AdjustTextPadding h3 {
+  margin: 12px;
+  line-height: 35px;
+}
